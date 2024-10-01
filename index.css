@@ -1,4 +1,4 @@
-:root{
+:root {
   --primary: #ffffff;
   --bg-color: #d8bfd8;
   --bg-envelope-color: #f5edd1;
@@ -6,7 +6,7 @@
   --envelope-cover: #e6cfa7;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
-  --heart-color: #ff6b6b
+  --heart-color: #ff6b6b;
 }
 
 body {
@@ -17,12 +17,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(var(--vh, 1vh) * 100); /* Utilisation de la vraie hauteur calculée */
-  overflow: hidden; /* Éviter les scrollbars */
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 }
 
 .container {
-  height: calc(var(--vh, 1vh) * 100); /* Utilisation de la vraie hauteur */
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   place-items: center;
 }
@@ -31,11 +31,13 @@ body {
   background: var(--bg-envelope-color);
   box-shadow: 0 0 40px var(--shadow-color);
 }
+
 .envelope-wrapper > .envelope {
   position: relative;
   width: 300px;
   height: 230px;
 }
+
 .envelope-wrapper > .envelope::before {
   content: "";
   position: absolute;
@@ -45,7 +47,7 @@ body {
   border-right: 150px solid transparent;
   border-left: 150px solid transparent;
   transform-origin: top;
-  transition: all 0.5s ease-in-out 0.7s;
+  transition: all 0.8s ease-in-out 1s;
 }
 
 .envelope-wrapper > .envelope::after {
@@ -59,6 +61,7 @@ body {
   border-bottom: 100px solid var(--envelope-cover);
   border-left: 150px solid var(--envelope-cover);
 }
+
 .envelope > .letter {
   position: absolute;
   right: 20%;
@@ -83,45 +86,21 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 15px;
-  height: 15px;
-  background: var(--heart-color);
-  z-index: 4;
-  transform: translate(-50%, -20%) rotate(45deg); /* Perfectly center the heart */
-  transition: transform 0.5s ease-in-out 1s;
-  box-shadow: 0 1px 6px var(--shadow-color);
+  font-size: 30px;
+  transform: translate(-50%, -40%);
   cursor: pointer;
+  z-index: 4;
 }
 
-.flap > .heart {
-  transform: rotate(90deg); /* Move on click */
-  transition-delay: 0.4s;
-}
-
-
-.heart:before, 
-.heart:after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: var(--heart-color);
-  border-radius: 50%;
-}
-.heart:before {
-  top: -7.5px;
-}
-.heart:after {
-  right: 7.5px;
-}
 .flap > .envelope:before {
   transform: rotateX(180deg);
   z-index: 0;
 }
+
 .flap > .envelope > .letter {
   bottom: 100px;
   transform: scale(1.5);
-  transition-delay: 1s;
+  transition-delay: 1.5s;
 }
 
 footer {
@@ -140,19 +119,11 @@ footer {
 
 .envelope-wrapper > .click-me {
   position: absolute;
-  top: 65%;
+  top: 68%;
   left: 50%;
   transform: translateX(-50%);
   color: var(--heart-color);
   font-size: 18px;
   font-weight: bold;
   z-index: 3;
-}
-.heart:hover {
-  transform: rotate(90deg);
-  transition-delay: 0.4s;
-}
-
-.flap > .heart:hover {
-  transform: rotate(0deg);
 }
