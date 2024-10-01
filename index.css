@@ -30,6 +30,7 @@ body {
 .container > .envelope-wrapper {
   background: var(--bg-envelope-color);
   box-shadow: 0 0 40px var(--shadow-color);
+  z-index: 1;
 }
 
 .envelope-wrapper > .envelope {
@@ -89,7 +90,7 @@ body {
   font-size: 30px;
   transform: translate(-50%, -40%);
   cursor: pointer;
-  z-index: 4;
+  z-index: 999;
 }
 
 .flap > .envelope:before {
