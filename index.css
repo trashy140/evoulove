@@ -87,7 +87,7 @@ body {
   top: 50%;
   left: 50%;
   font-size: 30px;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -40%) rotate(0deg);
   cursor: pointer;
   z-index: 999;
   transition: transform 0.8s ease-in-out;
