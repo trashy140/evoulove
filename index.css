@@ -17,12 +17,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Prevent any unnecessary scrolling */
-  height: 100vh; /* Make sure the body height matches the viewport */
+  height: calc(var(--vh, 1vh) * 100); /* Utilisation de la vraie hauteur calculée */
+  overflow: hidden; /* Éviter les scrollbars */
 }
 
 .container {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100); /* Utilisation de la vraie hauteur */
   display: grid;
   place-items: center;
 }
@@ -87,10 +87,17 @@ body {
   height: 15px;
   background: var(--heart-color);
   z-index: 4;
-  transform: translate(-50%, -20%) rotate(45deg); 
+  transform: translate(-50%, -20%) rotate(45deg); /* Perfectly center the heart */
   transition: transform 0.5s ease-in-out 1s;
   box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
 }
+
+.flap > .heart {
+  transform: rotate(90deg); /* Move on click */
+  transition-delay: 0.4s;
+}
+
 
 .heart:before, 
 .heart:after {
@@ -115,10 +122,6 @@ body {
   bottom: 100px;
   transform: scale(1.5);
   transition-delay: 1s;
-}
-.flap > .heart {
-  transform: rotate(90deg);
-  transition-delay: 0.4s;
 }
 
 footer {
