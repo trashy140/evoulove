@@ -13,7 +13,7 @@ p, h1, h2 {
   margin: 0;
 }
 
-html {
+html, input, button {
   font-family: "Ephesis", serif;
   font-weight: 400;
   font-style: normal;
@@ -29,6 +29,47 @@ body {
   justify-content: center;
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
+}
+
+.form {
+  margin-top: 4rem;
+  height: 100%;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;  
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;  
+}
+
+input {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 1rem;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
+button {
+  padding-block: 0.3rem;
+  padding-inline: 1rem;
+  color: var(--txt-color);
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
 }
 
 .container {
