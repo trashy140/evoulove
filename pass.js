@@ -28,7 +28,7 @@ async function hashPassword(password) {
     return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
-document.getElementById("password").addEventListener("keypress", function(event) {
+document.getElementById("password").addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         checkPassword();
     }
