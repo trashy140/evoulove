@@ -29,4 +29,3 @@ document.getElementById("password").addEventListener("keydown", function(event) 
         checkPassword();
     }
 });
-
