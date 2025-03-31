@@ -16,7 +16,7 @@ async function checkPassword() {
         document.querySelector(".login-container").classList.add("fade-out");
         window.location.href = "secret.html";
     } else {
-        alert("❌ Wrong password! Try again.");
+        alert("Wrong password! Try again.");
     }
 }
 

@@ -120,7 +120,7 @@ button {
   width: 54%;
   height: 90%;
   border-radius: 0.2rem;
-  background: var(--primary) url('images/6months.jpg') no-repeat center center;
+  background: var(--primary) url('/images/7months.JPG') no-repeat center center;
   background-size: cover;
   text-align: center;
   transition: all 1s ease-in-out;
